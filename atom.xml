@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://seny.me</id>
+    <title>Sen&apos;s Notebook</title>
+    <updated>2022-06-23T14:03:05.791Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://seny.me"/>
+    <link rel="self" href="https://seny.me/atom.xml"/>
+    <logo>https://seny.me/images/avatar.png</logo>
+    <icon>https://seny.me/favicon.ico</icon>
+    <rights>All rights reserved 2022, Sen&apos;s Notebook</rights>
+    <entry>
+        <title type="html"><![CDATA[解决iReport安装后无法启动/启动闪退]]></title>
+        <id>https://seny.me/post/ireport-launch-crash/</id>
+        <link href="https://seny.me/post/ireport-launch-crash/">
+        </link>
+        <updated>2019-06-06T01:42:04.000Z</updated>
+        <content type="html"><![CDATA[<p>主要原因：ireport依赖Java，不同的ireport版本依赖不同的jdk版本，我用的是ireport4.0.2，依赖Java1.6</p>
+<h2 id="step1">step1</h2>
+<p>项目环境安装指定版本的Java，Mac安装Java1.6需要去<a href="https://support.apple.com/kb/DL1572?locale=zh_CN" target="_blank">Mac官网</a>下载</p>
+<h2 id="step2">step2</h2>
+<p>找到ireport配置文件，打开编辑<br>
+Mac下的ireport配置文件路径<code>/Applications/Jaspersoft iReport Designer.app/Contents/Resources/ireport/etc/ireport.conf</code><br>
+修改<code>#jdkhome</code>变量值为step1中安装的Java home路径<br>
+<code>#jdkhome=&quot;/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home&quot;</code></p>
+<h2 id="step3">step3</h2>
+<p>不出意外的话，保存配置文件后重新打开ireport工具就能看到熟悉的欢迎界面了</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[macOS升级node版本]]></title>
+        <id>https://seny.me/post/mac-upgrade-node/</id>
+        <link href="https://seny.me/post/mac-upgrade-node/">
+        </link>
+        <updated>2019-05-23T00:06:23.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="step1">Step1</h2>
+<p>安装 n 工具包，就一个字母“n”</p>
+<p><code>sudo npm install -g n</code></p>
+<h2 id="step2">Step2</h2>
+<p>好了，现在你已经完成了一大步，下面用 n 工具升级node到最新稳定版</p>
+<p><code>sudo n stable</code></p>
+<hr>
+<p>恭喜你现在node已经升级到最新稳定版，通过 <code>node -v</code> 查看当前版本，你也可以使用下面的命令来升级到指定版本</p>
+<p><code>sudo n 8.9.0</code></p>
+<p>在网上查资料看到说Mac使用 n 工具包升级node会出现问题，我这里没有出现😄</p>
+]]></content>
+    </entry>
+</feed>

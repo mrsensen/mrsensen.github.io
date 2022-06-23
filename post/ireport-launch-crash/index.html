@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+<title>解决iReport安装后无法启动/启动闪退 - Sen&#39;s Notebook</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link type='text/css' rel='stylesheet' href='https://seny.me/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='https://seny.me/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script >hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+  <div class="layout">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="layout-header-logo">
+				<a href="https://seny.me">
+					<img class="logo" src="https://seny.me/media/images/site_avatar.png?v=1655992975152" alt="">
+				</a>
+			</div>
+			<div class="layout-header-menu d-md-inline-block d-none">
+				<ul class="layout-navigation-list">
+					
+					<li class="layout-navigation-item"><a title="首页" href="/">首页</a>
+					</li>
+					
+					<li class="layout-navigation-item"><a title="归档" href="/archives">归档</a>
+					</li>
+					
+					<li class="layout-navigation-item"><a title="标签" href="/tags">标签</a>
+					</li>
+					
+					<li class="layout-navigation-item"><a title="关于" href="/post/about">关于</a>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="layout-header-item d-none">
+				<span class="layout-header-action layout-header-search">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</span>
+			</div>
+			
+			<div class="layout-header-nav d-md-none d-inline-block">
+				<div class="layout-header-trigger">
+					<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/about">关于</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+
+        <div class="container">
+          <div class="layout-post">
+            <div class="layout-post-body">
+              <div class="row">
+
+                <div class="col-md-12 col-lg-10">
+                  <div class="layout-post-main m-right m-md-right">
+                    <div class="layout-post-header">
+                      <h1 class="layout-post-title">解决iReport安装后无法启动/启动闪退</h1>
+                      <div class="layout-post-meta">
+                        <div class="layout-meta-list">
+                          <span>2019-06-06</span>
+                        </div>
+                        <div class="layout-meta-list">
+                           <a href="https://seny.me/tag/mOK_ImC_n/" class="post--keyword"
+                            data-title="ireport" data-type="post_tag" data-term-id="39">ireport</a>
+                           <a href="https://seny.me/tag/iw3v3-88h/" class="post--keyword"
+                            data-title="JasperReport" data-type="post_tag" data-term-id="39">JasperReport</a>
+                           <a href="https://seny.me/tag/wgXT_ng0g/" class="post--keyword"
+                            data-title="报表" data-type="post_tag" data-term-id="39">报表</a>
+                           <a href="https://seny.me/tag/PhZkfpfxO/" class="post--keyword"
+                            data-title="开发工具" data-type="post_tag" data-term-id="39">开发工具</a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layout-post-content">
+                      <div class="layout-post-item">
+                         <p class="with-img"><img
+                            src="https://i.loli.net/2019/06/06/5cf87893572ec72981.jpeg" class="attachment-full size-full wp-post-image"
+                            alt="解决iReport安装后无法启动/启动闪退" /></p>
+                        
+                        <p>主要原因：ireport依赖Java，不同的ireport版本依赖不同的jdk版本，我用的是ireport4.0.2，依赖Java1.6</p>
+<h2 id="step1">step1</h2>
+<p>项目环境安装指定版本的Java，Mac安装Java1.6需要去<a href="https://support.apple.com/kb/DL1572?locale=zh_CN" target="_blank">Mac官网</a>下载</p>
+<h2 id="step2">step2</h2>
+<p>找到ireport配置文件，打开编辑<br>
+Mac下的ireport配置文件路径<code>/Applications/Jaspersoft iReport Designer.app/Contents/Resources/ireport/etc/ireport.conf</code><br>
+修改<code>#jdkhome</code>变量值为step1中安装的Java home路径<br>
+<code>#jdkhome=&quot;/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home&quot;</code></p>
+<h2 id="step3">step3</h2>
+<p>不出意外的话，保存配置文件后重新打开ireport工具就能看到熟悉的欢迎界面了</p>
+
+                      </div>
+                    </div>
+                    <div class="layout-post-social">
+                      <div class="layout-social-item">
+                        <div id="/post/ireport-launch-crash/" class="leancloud-visitors view"
+                          data-flag-title="解决iReport安装后无法启动/启动闪退">
+                          <span class="post-meta-item-text">阅读 </span>
+                          <span class="leancloud-visitors-count"></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="layout-post-navigation">
+                      <div class="row">
+                        
+                        <div class="post-card col-12">
+                          <a href="https://seny.me/post/mac-upgrade-node/" class="post-link">
+                            <div class="thumb" style="background-image: url('https://i.loli.net/2019/05/23/5ce5ef3d5d27864564.jpg');"></div>
+                            <span class="btn-next"><i class="fa fa-angle-right" aria-hidden='true'></i></span>
+                            <div class="thumb-mask"></div>
+                          </a>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="layout-comments"></div>
+                    
+                    <script type="text/javascript" src="https://unpkg.com/valine@1.4.18/dist/Valine.min.js"></script>
+
+<script>
+  var valine = new Valine();
+  valine.init({
+    el: '.layout-comments',
+    appId: 'x2nwEAl0cOc2njThEp8X73DF-gzGzoHsz',
+    appKey: 'Ob4OLq35oB774V4Jl9I2cffL',
+    notify: false,
+    verify: false,
+    visitor: true,
+    avatar: 'mp',
+    placeholder: '加入讨论...'
+  })
+</script>
+                    
+                  </div>
+                </div>
+
+                <div class="col-md-12 col-lg-2 d-none d-lg-block">
+                  <div class="layout-post-sidebar">
+                    <div class="layout-sidebar-item">
+                      <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#step1">step1</a></li>
+<li><a href="#step2">step2</a></li>
+<li><a href="#step3">step3</a></li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+    	<div class="layout-footer">
+		<div class="layout-footer-main">
+			<div class="container">
+
+				<div class="footer-links d-none d-md-block">
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</div>
+
+				<div class="footer-copy">
+					
+					<span>© 2019 </span>
+					<a href="https://seny.me" title="Sen&#39;s Notebook">Sen&#39;s Notebook</a> .
+					
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src='https://seny.me/media/scripts/main.js'></script>
+	<script type="text/javascript" src='https://seny.me/media/scripts/swiper.js'></script>
+	<script type="text/javascript" src='https://seny.me/media/scripts/swiper.min.js'></script>
+	
+
+  </div>
+</body>
+
+</html>
